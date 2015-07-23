@@ -22,7 +22,7 @@ exports.index = function(req,res){
    var search ='%';
    if(req.query.search != undefined) search += (req.query.search).replace(/\s/g,'%') + '%';
     var query = {
-       where:["pregunta like ?",search],
+       where:["upper(pregunta) like ?",search.toUpperCase()],
        order: 'pregunta ASC'
    };
 
