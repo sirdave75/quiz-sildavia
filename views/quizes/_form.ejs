@@ -1,0 +1,25 @@
+<p>
+    <label for="cat" class="rem">Categoría:</label>
+    <select name="quiz[tema]" id="tema">
+        <option value="" <% if(quiz.tema == undefined){ %>selected <%} %>>-- Seleccione tema --</option>
+        <option value="otro" <% if(quiz.tema == 'otro'){ %>selected <%} %>  > Otro</option>
+        <option value="humanidades" <% if(quiz.tema == 'humanidades'){ %>selected <%} %>  >Humanidades</option>
+        <option value="ocio" <% if(quiz.tema == 'ocio'){ %>selected="selected" <%}  %>  >Ocio</option>
+        <option value="ciencia" <% if(quiz.tema == 'ciencia') { %>selected="selected" <%}  %>  >Ciencia</option>
+        <option value="tecnología" <% if(quiz.tema == 'tecnología'){ %>selected="selected" <%}  %>  >Tecnología</option>
+        <option value="geografía" <% if(quiz.tema == 'geografia'){ %>selected="selected" <%} %>  >Geografía</option>
+
+    </select>
+</p>
+<p>
+    <label for="preg" class="rem">Pregunta:</label>
+    <input type="text" name="quiz[pregunta]" id="preg" value="<%= quiz.pregunta%>" placeholder="Pregunta">
+</p>
+<p>
+    <label for="res" class="rem">Respuesta:</label>
+    <input type="text" name="quiz[respuesta]" id="res" value="<%= quiz.respuesta%>" placeholder="Respuesta">
+</p>
+<p>
+    <a href="/quizes" ><button type="button">Cancelar</button> </a>
+    <input type="submit" value="Guardar">
+</p>

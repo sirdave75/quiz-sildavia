@@ -19,7 +19,17 @@
         <span><a href="/creditos/author">Author</a></span>
     </nav>
     <section class="main" id="s1">
-       <%- body %>
+        <% if(errors.length) { %>
+          <span id="ErrorsMsgs">
+            Corregir errores: <br>
+            <% for(var i in errors){ %>
+                <span><%= errors[i].message %></span><br>
+            <%  } %>
+          </span>
+        <% } %>
+        <div>
+            <%- body %>
+        </div>
     </section>
     <footer class="main" id="f1">
         <a href="https://github.com/sirdave75/quiz-sirdave" target="_blank">quiz-sirdave en github</a>

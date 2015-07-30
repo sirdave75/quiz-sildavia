@@ -10,6 +10,25 @@ section>div{padding:20px;}
 header, nav,section{background: #eee;text-align: center;color:#000}
 footer{background: #eee;text-align: center;}
 nav span{margin: 0px 10px 0px 0px;}
+#ErrorsMsgs {color:#f61;font-size: smaller;}
 a {
   color: #00B7FF;
+    text-decoration: none;
+}
+
+table{
+    border:0px;
+    margin: 2em 0 ;
+}
+table th{
+    text-align: left;
+    padding-left: 5px;
+    border-bottom:1px solid #336699;
+    background-color: #ff6611;
+    color: #eeeeee;
+}
+table td{
+    text-align: left;
+    padding-left: 5px;
+    border-bottom:1px solid #336699;
 }
