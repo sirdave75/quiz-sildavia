@@ -3,6 +3,7 @@ var router = express.Router();
 
 var quizController = require('../controllers/quiz_controller');
 var creditosController = require('../controllers/creditos_controller');
+var commentController = require('../controllers/comments_controller');
 
 //Página de entrada (home page)
 router.get('/', function(req, res, next) {
@@ -20,7 +21,10 @@ router.get('/quizes/new',                   quizController.new);
 router.post('/quizes/create',               quizController.create);
 router.get('/quizes/:quizId(\\d+)/edit',    quizController.edit);
 router.put('/quizes/:quizId(\\d+)',         quizController.update);
-router.delete('/quizes/:quizId(\\d+)',         quizController.delete);
+router.delete('/quizes/:quizId(\\d+)',      quizController.delete);
+
+router.get('/quizes/:quizId(\\d+)/comments/new',     commentController.new);
+router.post('/quizes/:quizId(\\d+)/comments',        commentController.create);
 
 router.get('/creditos/author',creditosController.author);
 
