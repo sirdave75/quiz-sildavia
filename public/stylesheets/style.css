@@ -32,3 +32,6 @@ table td{
     padding-left: 5px;
     border-bottom:1px solid #336699;
 }
+.right{
+    float:right;
+}
